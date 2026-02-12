@@ -13,9 +13,10 @@ public class Assignment1Program1 {
     System.err.println("   AAA             AAA   BBBBBBBBBBBBBBBB       ");
 
     Scanner scan = new Scanner(System.in);
+    String fiveLetterString;
     System.err.println("Enter a 5 letter string: ");
-    Object user = scan.toString();
-    System.err.println(user);
+    fiveLetterString = scan.nextLine();
+    System.err.println(fiveLetterString);
     scan.close();
   }
 }
