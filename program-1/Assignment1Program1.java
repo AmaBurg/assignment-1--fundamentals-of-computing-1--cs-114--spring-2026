@@ -14,9 +14,12 @@ public class Assignment1Program1 {
 
     Scanner scan = new Scanner(System.in);
     String fiveLetterString;
+    System.err.println();
+    System.err.println();
     System.err.println("Enter a 5 letter string: ");
     fiveLetterString = scan.nextLine();
     System.err.println(fiveLetterString);
+    
     scan.close();
   }
 }
