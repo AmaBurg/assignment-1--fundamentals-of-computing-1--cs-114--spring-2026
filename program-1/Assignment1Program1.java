@@ -26,14 +26,14 @@ public class Assignment1Program1 {
     System.err.println("Enter a 5 letter string: ");
     
     fiveLetterString = scan.nextLine(); 
-    // Sets the variable fiveLetterString to the next string that the user inputs in console
+    //Sets the variable fiveLetterString to the next string that the user inputs in console
     
     threeLetterString = fiveLetterString.substring(1, (fiveLetterString.length() - 1)); 
     //Removes the first and last character of the fiveLetterString varible
 
     for (int i = 0; i < threeLetterString.length(); i++) {
       reverseString = threeLetterString.charAt(i) + reverseString;
-      //appends the character at index(i) of threeLetterString to the front of reverseString, with i increasing by 1 for each loop
+      //Appends the character at index(i) of threeLetterString to the front of reverseString, with i increasing by 1 for each loop
     }
     System.err.println(reverseString);
     
