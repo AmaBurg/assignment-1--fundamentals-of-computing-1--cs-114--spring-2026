@@ -23,7 +23,7 @@ public class Assignment1Program2 {
     
     for (int i = baseTen; i > 0;) {
       conversion = (i%newBase) + conversion;
-      // Appends the remainder of i, or baseTen, divided by newBase to string conversion
+      // Appends the remainder of i, or baseTen, divided by newBase to string(conversion)
       
       i = i/newBase;
     }
@@ -31,7 +31,7 @@ public class Assignment1Program2 {
     while (conversion.length() < 4) {
       conversion = "0" + conversion;
     }
-    // Makes conversion 4 digits for when the base conversion is less than 4 digits
+    // Makes string(conversion) 4 digits/characters for when the conversion of base is less than 4 digits
     
     System.err.println(baseTen + " (base 10) = " + conversion + " (base " + newBase + ")");
   }
