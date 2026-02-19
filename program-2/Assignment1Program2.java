@@ -13,7 +13,7 @@ public class Assignment1Program2 {
     
     newBase = scan.nextInt();
     baseMax = Math.pow(newBase, 4) - 1;
-    //Formula for max of a base = b^n - 1; b-base, n-# of digits
+    // Formula for max of a base = b^n - 1; b-base, n-# of digits
     
     System.err.println("The maximum, 4-digit, base 10 number in base " + newBase + " is: " + baseMax);
     System.err.println("Enter a base 10 number in the range of 0 to " + baseMax + " to convert to base " + newBase +": ");
