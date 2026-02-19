@@ -19,18 +19,20 @@ public class Assignment1Program2 {
     System.err.println("Enter a base 10 number in the range of 0 to " + baseMax + " to convert to base " + newBase +": ");
     
     baseTen = scan.nextInt();
+    scan.close();
     
     for (int i = baseTen; i > 0;) {
       conversion = (i%newBase) + conversion;
       // Appends the remainder of i, or baseTen, divided by newBase to string conversion
+      
       i = i/newBase;
     }
+
+    while (conversion.length() < 4) {
+      conversion = "0" + conversion;
+    }
+    // Makes conversion 4 digits for when the base conversion is less than 4 digits
     
     System.err.println(baseTen + " (base 10) = " + conversion + " (base " + newBase + ")");
-    // The beginning 0 is not being appended to variable conversion. | 2/19, 3:23pm |
-    int test = 8%4;
-    System.err.println(test);
-
-    scan.close();
   }
 }
