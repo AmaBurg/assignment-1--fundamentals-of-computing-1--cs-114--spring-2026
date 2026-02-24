@@ -4,49 +4,45 @@ import java.util.Random;
 
 public class Assignment1Program1 {
   public static void main(String[] args) {
-    System.err.println("           AAA           BBBBBBBBBBBBBB         ");
-    System.err.println("          AAAAA          BBB       BBBBB        ");
-    System.err.println("         AAA AAA         BBB        BBBBB       ");
-    System.err.println("        AAA   AAA        BBB       BBBBB        ");
-    System.err.println("       AAA     AAA       BBBBBBBBBBBBBB         ");
-    System.err.println("      AAAAAAAAAAAAA      BBB         BBBB       ");
-    System.err.println("     AAA         AAA     BBB          BBBB      ");
-    System.err.println("    AAA           AAA    BBB         BBBBB      ");
-    System.err.println("   AAA             AAA   BBBBBBBBBBBBBBBB       ");
-
-    Scanner scan = new Scanner(System.in);
-
     String fiveLetterString = "";
     String threeLetterString = "";
     String reverseString = "";
 
-    System.err.println();
-    System.err.println();
-    System.err.println("Enter a 5 letter string: ");
-    
-    fiveLetterString = scan.nextLine(); 
-    
-    threeLetterString = fiveLetterString.substring(1, (fiveLetterString.length() - 1)); 
-    //Removes the first and last character of the fiveLetterString varible
+    Scanner input = new Scanner(System.in);
 
-    for (int i = 0; i < threeLetterString.length(); i++) {
-      reverseString = threeLetterString.charAt(i) + reverseString;
-      //Appends the character at index(i) of threeLetterString to the front of reverseString, with i increasing by 1 for each loop
-    }
-    
-    Double fahrenheit;
-    Double celsius;
-    System.err.println("Enter a number in Fahrenheit: ");
-    fahrenheit = scan.nextDouble();
-    Double conversionFactor = (double)5/9;
-    celsius = (fahrenheit - 32) * conversionFactor;
-    scan.close();
+    double fahrenheit;
+    double celsius;
+    double conversionFactor = 5.0/9.0;
 
-    System.err.println("Generating random number...");
     Random generator = new Random();
     int randNum = generator.nextInt(32, 16384);
 
-    System.err.println("Your new string is: " + celsius + reverseString + randNum);
+    System.out.println("           AAA           BBBBBBBBBBBBBB         ");
+    System.out.println("          AAAAA          BBB       BBBBB        ");
+    System.out.println("         AAA AAA         BBB        BBBBB       ");
+    System.out.println("        AAA   AAA        BBB       BBBBB        ");
+    System.out.println("       AAA     AAA       BBBBBBBBBBBBBB         ");
+    System.out.println("      AAAAAAAAAAAAA      BBB         BBBB       ");
+    System.out.println("     AAA         AAA     BBB          BBBB      ");
+    System.out.println("    AAA           AAA    BBB         BBBBB      ");
+    System.out.println("   AAA             AAA   BBBBBBBBBBBBBBBB       ");
+    System.out.println();
+    System.out.println();
+    System.out.println("Enter a 5 letter string: ");
 
+    fiveLetterString = input.nextLine();
+
+    threeLetterString = fiveLetterString.substring(1, (fiveLetterString.length() - 1));
+    for (int i = 0; i < threeLetterString.length(); i++) {
+      reverseString = threeLetterString.charAt(i) + reverseString;
+    }
+
+    System.out.println("Enter a number in Fahrenheit: ");
+    fahrenheit = input.nextDouble();
+    celsius = (fahrenheit - 32) * conversionFactor;
+    input.close();
+
+    System.out.println("Generating random number...");
+    System.out.println("Your new string is: " + celsius + reverseString + randNum);
   }
 }
